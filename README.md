@@ -2,6 +2,13 @@
 
 This repo is a **platform-engineering focused MLOps skeleton** designed for the assignment:
 
+#### Supplement repos:
+
+1. > https://github.com/saikumarpochireddygari/platform-setup-repo-lc
+2. > https://github.com/saikumarpochireddygari/cookiecutter-mlops-spoke-template/tree/main/%7B%7Bcookiecutter.project_slug%7D%7D
+3. > https://github.com/saikumarpochireddygari/spoke-repo
+4. > https://github.com/saikumarpochireddygari/platform-service/tree/main
+
 ## Overview
 This repo provisions a **local “HUB” MLOps platform** using Docker Compose. The hub provides shared services that enable teams (spokes) to:
 - Orchestrate pipelines (Airflow)
@@ -46,6 +53,15 @@ In a **hub–spoke** model:
 ### Setup the Local Docker Environment using this Repo
 > https://github.com/saikumarpochireddygari/platform-setup-repo-lc
 
+### Cookiecutter Template for Team adaptability
+> https://github.com/saikumarpochireddygari/cookiecutter-mlops-spoke-template/tree/main/%7B%7Bcookiecutter.project_slug%7D%7D
+
+### Sample Spoke Repo
+> https://github.com/saikumarpochireddygari/spoke-repo
+
+### Platform Services Repo
+> https://github.com/saikumarpochireddygari/platform-service/tree/main
+
 
 ### Local endpoints (what you can demo)
 
@@ -55,14 +71,6 @@ In a **hub–spoke** model:
 - **MinIO S3 endpoint**: `http://localhost:9000`
 - **Jenkins**: `http://localhost:8081/jenkins`
 
-### Cookiecutter Template for Team adaptability
-> https://github.com/saikumarpochireddygari/cookiecutter-mlops-spoke-template/tree/main/%7B%7Bcookiecutter.project_slug%7D%7D
-
-### Sample Spoke Repo
-> https://github.com/saikumarpochireddygari/spoke-repo
-
-### Platform Services Repo
-> https://github.com/saikumarpochireddygari/platform-service/tree/main
 
 ---
 
@@ -202,18 +210,16 @@ This skeleton demonstrates where governance would be enforced:
 - **Run ownership**: Jenkins captures `TRIGGERING_USER` (owner)
 - **Policy hooks**: structural validation before deployment
 - **Audit trail**: Jenkins job logs for deployments
-- **Promotion stub**: extend to MLflow model stages (None → Staging → Production) gated by tests
-
+- **Promotion stub**: extend to MLflow model stages (None → Staging → Production) gated by scripts
+- **Airflow**: structured JSON logging for tasks Check Airflow Audit Logs
 ---
 
 ## Observability & Scaling (Minimal by design)
-**Current:** Docker logs + service UIs.
+**Current:** Docker logs + service UIs (Jenkins, Airflow).
 
 **Planned extensions (assignment narrative):**
 - Prometheus + Grafana (metrics)
-- structured JSON logging for tasks
 - drift checks as scheduled DAGs -- Completed
-- Terraform stub for AWS deployment (EKS/ECS + RDS + S3 + Secrets Manager)
 ## Visit the Deepdive URL To Check for production ready setup with all of the components.
 ---
  > https://app.eraser.io/workspace/f7xIJLO4iWpWl5WHBcB8?origin=share
