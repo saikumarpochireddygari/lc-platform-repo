@@ -48,7 +48,7 @@ In a **hub–spoke** model:
 ### Platform guardrails (for Operators)
 - Central metadata store (Postgres)
 - Artifact store (MinIO S3-compatible)
-- Structured logs persisted locally in Platform repo for now due to simplicity
+- Structured logs persisted locally in Volume
 
 ### Setup the Local Docker Environment using this Repo
 > https://github.com/saikumarpochireddygari/platform-setup-repo-lc
@@ -220,6 +220,6 @@ This skeleton demonstrates where governance would be enforced:
 **Planned extensions (assignment narrative):**
 - Prometheus + Grafana (metrics)
 - drift checks as scheduled DAGs -- Completed
-## Visit the Deepdive URL To Check for production ready setup with all of the components.
+## Visit the Deepdive URL To Check for production ready setup with cloud native components.
 ---
  > https://app.eraser.io/workspace/f7xIJLO4iWpWl5WHBcB8?origin=share
